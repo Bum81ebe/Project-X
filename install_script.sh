@@ -8,6 +8,8 @@ sudo apt-get install net-tools
 sudo apt-get install tcpdump
 sudo apt-get install dsniff -y
 sudo apt install grepcidr
+sudi apt install unzip
+
 
 # Install dos deflate
 wget https://github.com/jgmdev/ddos-deflate/archive/master.zip -O ddos.zip
