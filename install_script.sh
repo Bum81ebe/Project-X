@@ -3,6 +3,7 @@
 # Update the system and install necessary utilities
 sudo apt-get update && sudo apt-get install -y curl build-essential
 
+sudo add-apt-repository universe
 sudo apt install dnsutils
 sudo apt-get install net-tools
 sudo apt-get install tcpdump
