@@ -4,12 +4,12 @@
 sudo apt-get update && sudo apt-get install -y curl build-essential
 
 sudo add-apt-repository universe
-sudo apt install dnsutils
+sudo apt-get install dnsutils
 sudo apt-get install net-tools
 sudo apt-get install tcpdump
 sudo apt-get install dsniff -y
-sudo apt install grepcidr
-sudo apt install unzip
+sudo apt-get install grepcidr
+sudo apt-get install unzip
 
 
 # Install dos deflate
