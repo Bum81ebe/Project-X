@@ -8,8 +8,8 @@ sudo apt-get install dnsutils
 sudo apt-get install net-tools
 sudo apt-get install tcpdump
 sudo apt-get install dsniff -y
-sudo apt-get install grepcidr
-sudo apt-get install unzip
+sudo apt install grepcidr
+sudo apt install unzip
 
 
 # Install dos deflate
