@@ -3,29 +3,26 @@
 # Update the system and install necessary utilities
 sudo apt-get update && sudo apt-get install -y curl build-essential
 
-sudo add-apt-repository universe
-sudo apt-get install dnsutils
-sudo apt-get install net-tools
-sudo apt-get install tcpdump
-sudo apt-get install dsniff -y
-sudo apt install grepcidr
-sudo apt install unzip
-
+# Add the Universe repository and install packages
+sudo add-apt-repository -y universe
+sudo apt-get update
+sudo apt-get install -y dnsutils net-tools tcpdump dsniff grepcidr unzip haproxy
 
 # Install dos deflate
 wget https://github.com/jgmdev/ddos-deflate/archive/master.zip -O ddos.zip
 unzip ddos.zip
-cd ddos-deflate-master
-./install.sh
 
-# Note: The above commands change the number of connections, email, and ban period.
-# You can adjust the sed commands to modify other parameters in the configuration file.
+if [ -d "ddos-deflate-master" ]; then
+    cd ddos-deflate-master
+    ./install.sh
+else
+    echo "Error: Directory ddos-deflate-master does not exist."
+    exit 1
+fi
 
+# Ensure the ddos service is enabled and started
 sudo systemctl enable ddos
 sudo systemctl start ddos
-
-# Install haproxy
-sudo apt-get install -y haproxy
 
 # Verify installations
 which haproxy
